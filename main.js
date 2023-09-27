@@ -4,7 +4,7 @@ import { characters } from './src/characters'
 
 document.querySelector('#app').innerHTML = `
   <div>
-    <h1>Hello Vite!</h1>
+    <header class="header"></header>
     <section class="card-container"></section>
   </div>
 `
