@@ -1,4 +1,3 @@
-import '../style.css'
 export function characters() {
     const API_URL = 'https://api.jikan.moe/v4/characters';
 
