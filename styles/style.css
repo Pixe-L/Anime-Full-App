@@ -37,6 +37,7 @@ body {
 .phrase {
   text-align: center;
   margin: 15px 0 10px 0;
+  filter: drop-shadow(0 0 1rem rgb(179, 12, 212));
 }
 
 /* CARDS */
