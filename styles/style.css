@@ -28,8 +28,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
+  border-top: 1px solid #292929;
+  border-bottom: 1px solid #292929;
   margin: 0 0 30px 0;
   padding: 30px 50px;
 }

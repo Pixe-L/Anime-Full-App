@@ -1,4 +1,4 @@
-import './style.css'
+import './styles/style.css';
 import { characters } from './src/characters'
 import { header } from './src/header';
 

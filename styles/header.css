@@ -1,0 +1,25 @@
+.header__container ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.header__container li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.header__container .logo {
+    width: 60px;
+}
+
+.header__container .discord {
+    width: 35px;
+}
+
+.header__container .git {
+    width: 35px;
+}
