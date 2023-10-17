@@ -91,7 +91,7 @@ body {
 .description {
   height: 300px;
   overflow: auto;
-  text-justify: inter-word;
+  text-align: justify;
 }
 
 .description::-webkit-scrollbar {
@@ -104,4 +104,19 @@ body {
   width: 200px;
   border-radius: 10px;
   opacity: .5;
+}
+
+/* <========= MOVIL ============> */
+@media screen and (max-width: 600px) {
+  .card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .img {
+    width: 150px;
+  }
+
+  .card-item {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
