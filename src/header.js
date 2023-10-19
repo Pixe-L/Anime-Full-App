@@ -6,6 +6,13 @@ export function header() {
     const phraseContainer = document.createElement('div');
     const phraseContent = document.querySelector('.phrase');
 
+    const inpt = document.createElement('input');
+    inpt.classList.add('search');
+    inpt.placeholder = 'Search your favorite character...'
+
+    if (inpt.length > 0) {
+        inpt.style.display = 'none';
+    }
 
     const disc = document.createElement('img');
     disc.classList.add('discord');
@@ -39,8 +46,8 @@ export function header() {
     headerContainer.classList.add('header__container');
     headerContent.appendChild(headerContainer);
     headerContainer.appendChild(logo);
+    headerContainer.appendChild(inpt);
     headerContainer.appendChild(ul);
-    // headerContainer.appendChild(git);
 
     phraseContainer.classList.add('phrase__container');
     phraseContent.innerHTML = `

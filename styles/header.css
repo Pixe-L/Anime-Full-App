@@ -3,7 +3,19 @@
     justify-content: end;
     align-items: center;
     gap: 20px;
-    width: 100%;
+    width: min-content;
+}
+
+.header__container .search {
+    background-color: transparent;
+    outline: none;
+    border: 2px solid var(--primaryColor);
+    border-radius: 10px;
+    color: var(--fontColor);
+    padding: 15px 20px;
+    width: 30%;
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 
 .header__container li {
