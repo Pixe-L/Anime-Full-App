@@ -16,6 +16,7 @@
     width: 30%;
     font-size: 1.6rem;
     font-weight: bold;
+    opacity: .5;
 }
 
 .header__container li {

@@ -10,9 +10,20 @@ export function header() {
     inpt.classList.add('search');
     inpt.placeholder = 'Search your favorite character...'
 
-    if (inpt.length > 0) {
-        inpt.style.display = 'none';
-    }
+    inpt.addEventListener('input', () => {
+        if (inpt.value.length > 0) {
+            inpt.style.boxShadow = '0 0 1.5rem rgb(180, 12, 214)';
+            inpt.style.opacity = 1;
+        } else {
+            inpt.style.border = '2px solid #b40cd6';
+            inpt.style.opacity = .5;
+        }
+    })
+    inpt.addEventListener('keyup', (event) => {
+        if (event.keyCode === 13) {
+            console.log('Hola universo!');
+        }
+    })
 
     const disc = document.createElement('img');
     disc.classList.add('discord');
