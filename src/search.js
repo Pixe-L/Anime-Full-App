@@ -1,8 +1,8 @@
-export const search = () => {
-    const inpt = document.createElement('input');
-    inpt.classList.add('search');
-    inpt.placeholder = 'Search your favorite character...'
+export const inpt = document.createElement('input');
+inpt.classList.add('search');
+inpt.placeholder = 'Search your favorite character...'
 
+export const search = () => {
     inpt.addEventListener('input', () => {
         if (inpt.value.length > 0) {
             inpt.style.boxShadow = '0 0 1.5rem rgb(180, 12, 214)';
