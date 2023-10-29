@@ -17,8 +17,38 @@ export const search = () => {
 
         if (event.keyCode === 13) {
             let character = inpt.value.toUpperCase().trim();
-            console.log(character);
-            const API_URL = `https://api.jikan.moe/v4/characters?q=${character}&sfw`
+
+            const API_URL = fetch(`https://api.jikan.moe/v4/characters?q=${character}&sfw`);
+
+            API_URL
+                .then(resp => resp.json())
+                .then(data => {
+                    if (data.data.length <= 0) {
+                        alert('Not found!');
+                    } else {
+                        data.data.forEach(item => {
+                            const articleCard = document.createRange().createContextualFragment(`
+                                <article class="article">
+                                    <div class="card-container">
+                                        <div class="card__info">
+                                            <h2 class="card__title">${item.name}</h2>
+                                            <h3 class="card__subtitle">${item.name_kanji ? item.name_kanji : '愛してます'}</h3>
+                                            <p class="card__description"></p>
+                                        </div>
+                                        <div class="card__container-img">
+                                            <img class="card__img" />
+                                        </div>
+                                    </div>
+                                </article>
+                            `);
+                            document.querySelector('.modal-container').appendChild(articleCard);
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.log(error)
+                });
+
         }
     })
 }
