@@ -32,17 +32,18 @@ export const search = () => {
                                     <div class="card-container">
                                         <div class="card__info">
                                             <h2 class="card__title">${item.name}</h2>
-                                            <h3 class="card__subtitle">${item.name_kanji ? item.name_kanji : '愛してます'}</h3>
-                                            <p class="card__description"></p>
+                                            <h4 class="card__subtitle">${item.name_kanji ? item.name_kanji : '愛してます'}</h4>
+                                            <p class="card__description">${item.about}</p>
                                         </div>
                                         <div class="card__container-img">
-                                            <img class="card__img" />
+                                            <img class="card__img" src="${item.images.webp.image_url}"/>
                                         </div>
                                     </div>
                                 </article>
                             `);
                             document.querySelector('.modal-container').appendChild(articleCard);
                         });
+                        console.log(data.data);
                     }
                 })
                 .catch(error => {
