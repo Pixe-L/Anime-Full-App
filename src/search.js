@@ -1,6 +1,7 @@
+import('../styles/header.css');
 export const inpt = document.createElement('input');
 inpt.classList.add('search');
-inpt.placeholder = 'Search your favorite character...'
+inpt.placeholder = 'Search your favorite character...';
 
 export const search = () => {
     inpt.addEventListener('input', () => {
@@ -49,7 +50,8 @@ export const search = () => {
                 .catch(error => {
                     console.log(error)
                 });
-
         }
     })
+    const searchCont = document.querySelector('.search-container');
+    searchCont.appendChild(inpt);
 }

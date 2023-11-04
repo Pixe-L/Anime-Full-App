@@ -6,7 +6,7 @@
     width: min-content;
 }
 
-.header__container .search {
+.search-container .search {
     background-color: transparent;
     outline: none;
     border: 2px solid var(--primaryColor);
@@ -17,6 +17,11 @@
     font-size: 1.6rem;
     font-weight: bold;
     opacity: .5;
+    margin-block-end: 30px;
+}
+
+.search-container {
+    text-align: center;
 }
 
 .header__container li {
@@ -35,4 +40,11 @@
 
 .header__container .git {
     width: 35px;
+}
+
+@media (max-width: 768px) {
+    .search-container .search {
+        width: 80%;
+        font-size: 1.5rem;
+    }
 }

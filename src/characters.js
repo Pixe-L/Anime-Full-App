@@ -6,7 +6,6 @@ export function characters() {
         .then(response => {
             if (response.data && Array.isArray(response.data)) {
                 const characters = response.data;
-                console.log(characters);
                 renderCard(characters);
             } else {
                 console.error('Error: Invalid response format.');
