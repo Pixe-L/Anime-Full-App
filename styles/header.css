@@ -47,4 +47,8 @@
         width: 80%;
         font-size: 1.5rem;
     }
+
+    .header__container .discord {
+        margin-inline-end: 20px;
+    }
 }

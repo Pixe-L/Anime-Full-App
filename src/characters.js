@@ -37,13 +37,6 @@ function renderCard(data) {
         </div>
     `).join('');
 
-    card.addEventListener('click', ilumination);
-
-    // FUNCION PARA ILUMINAR CARD
-    function ilumination() {
-        console.log('Hola mundo!');
-    }
-
     cardContainer.appendChild(card);
 }
 

@@ -1,4 +1,5 @@
 import('../styles/header.css');
+import('../styles/modal.css');
 export const inpt = document.createElement('input');
 inpt.classList.add('search');
 inpt.placeholder = 'Search your favorite character...';
@@ -18,6 +19,9 @@ export const search = () => {
 
         if (event.keyCode === 13) {
             let character = inpt.value.toUpperCase().trim();
+            let cardContainer = document.querySelector('.card-container');
+
+            cardContainer.style.display = 'none';
 
             const API_URL = fetch(`https://api.jikan.moe/v4/characters?q=${character}&sfw`);
 
@@ -30,11 +34,11 @@ export const search = () => {
                         data.data.forEach(item => {
                             const articleCard = document.createRange().createContextualFragment(`
                                 <article class="article">
-                                    <div class="card-container">
+                                    <div class="card-containers">
                                         <div class="card__info">
                                             <h2 class="card__title">${item.name}</h2>
                                             <h4 class="card__subtitle">${item.name_kanji ? item.name_kanji : '愛してます'}</h4>
-                                            <p class="card__description">${item.about}</p>
+                                            <p class="card__description">${item.about ? item.about : 'Not found!'}</p>
                                         </div>
                                         <div class="card__container-img">
                                             <img class="card__img" src="${item.images.webp.image_url}"/>
@@ -46,6 +50,7 @@ export const search = () => {
                         });
                         console.log(data.data);
                     }
+                    inpt.value = '';
                 })
                 .catch(error => {
                     console.log(error)

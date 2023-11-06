@@ -1,5 +1,3 @@
-// import { search, inpt } from './search';
-
 import('../styles/header.css');
 export function header() {
     const headerContent = document.querySelector('.header');
@@ -8,7 +6,6 @@ export function header() {
     const phraseContainer = document.createElement('div');
     const phraseContent = document.querySelector('.phrase');
 
-    // search();
 
     const disc = document.createElement('img');
     disc.classList.add('discord');
@@ -41,7 +38,6 @@ export function header() {
     headerContainer.classList.add('header__container');
     headerContent.appendChild(headerContainer);
     headerContainer.appendChild(logo);
-    // headerContainer.appendChild(inpt);
     headerContainer.appendChild(ul);
 
     phraseContainer.classList.add('phrase__container');

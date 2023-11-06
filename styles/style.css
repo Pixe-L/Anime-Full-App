@@ -112,11 +112,11 @@ body {
 @media screen and (max-width: 800px) {
   .card {
     grid-template-columns: repeat(1, 1fr);
+    padding: 0 5px;
   }
 
   .img {
     width: 140px;
-    /* height: 100%; */
   }
 
   .card-item {
