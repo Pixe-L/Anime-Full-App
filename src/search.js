@@ -2,7 +2,7 @@ import('../styles/header.css');
 import('../styles/modal.css');
 export const inpt = document.createElement('input');
 inpt.classList.add('search');
-inpt.placeholder = 'Search your favorite character...';
+inpt.placeholder = 'Search characters...';
 
 export const search = () => {
     inpt.addEventListener('input', () => {
@@ -21,6 +21,7 @@ export const search = () => {
             let character = inpt.value.toUpperCase().trim();
             let cardContainer = document.querySelector('.card-container');
 
+            document.querySelector('.modal-container').innerHTML = '';
             cardContainer.style.display = 'none';
 
             const API_URL = fetch(`https://api.jikan.moe/v4/characters?q=${character}&sfw`);
@@ -51,6 +52,9 @@ export const search = () => {
                         console.log(data.data);
                     }
                     inpt.value = '';
+                    inpt.style.border = '2px solid #b40cd6';
+                    inpt.style.opacity = .5;
+                    inpt.style.boxShadow = 'none';
                 })
                 .catch(error => {
                     console.log(error)
