@@ -6,11 +6,6 @@
     text-align: center;
     gap: 50px;
     padding: 0 30px;
-    /* position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%); */
-    /* background-color: black; */
 }
 
 .card-containers {
@@ -67,4 +62,37 @@
     width: 200px;
     border-radius: 10px;
     opacity: .5;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 15px;
+    }
+
+    .card-containers {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card__img {
+        width: 140px;
+    }
+
+    .card-containers {
+        background-color: #46143171;
+        color: white;
+        border: 2px solid var(--primaryColor);
+        box-shadow: 0 0 1.5rem var(--primaryColor);
+
+        .card__img {
+            filter: drop-shadow(0 0 1rem var(--primaryColor));
+            opacity: 1;
+        }
+
+        .card__title {
+            filter: drop-shadow(0 0 .5rem var(--primaryColor));
+        }
+    }
 }
